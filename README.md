@@ -86,5 +86,5 @@ Notice how a tester will be *forced* to use other means (e.g. VoiceOver) to navi
 You can also add this project to yours by using CocoaPods. To do this, add the following line to your Podfile:
 
 ```
-pod 'ALDColorBlind`, '~>1.0.0'
+pod 'ALDColorBlindEffect`, '~>1.0.0'
 ```
