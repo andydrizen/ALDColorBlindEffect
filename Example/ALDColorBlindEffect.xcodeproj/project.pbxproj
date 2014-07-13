@@ -1,0 +1,356 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1B23A0819721484008854DA /* ALDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B23A0719721484008854DA /* ALDAppDelegate.m */; };
+		A1B23A10197214A1008854DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1B23A0E197214A1008854DA /* InfoPlist.strings */; };
+		A1B23A12197214AB008854DA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B23A11197214AB008854DA /* main.m */; };
+		A1B23A16197214B8008854DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B23A14197214B8008854DA /* Images.xcassets */; };
+		A1B23A17197214B8008854DA /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B23A15197214B8008854DA /* Storyboard.storyboard */; };
+		A1B23A1B197214F3008854DA /* ALDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B23A1A197214F3008854DA /* ALDRootViewController.m */; };
+		A1B4A7AA19722A9200401503 /* ALDColorBlindEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B4A7A919722A9200401503 /* ALDColorBlindEffect.m */; };
+		A1DD185F1970A42E009DF3E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DD185E1970A42E009DF3E5 /* Foundation.framework */; };
+		A1DD18611970A42E009DF3E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DD18601970A42E009DF3E5 /* CoreGraphics.framework */; };
+		A1DD18631970A42E009DF3E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DD18621970A42E009DF3E5 /* UIKit.framework */; };
+		A1DD18961970A840009DF3E5 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DD18951970A840009DF3E5 /* CoreImage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1B23A0619721484008854DA /* ALDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDAppDelegate.h; path = ALDColorBlindEffect/ALDAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		A1B23A0719721484008854DA /* ALDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDAppDelegate.m; path = ALDColorBlindEffect/ALDAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		A1B23A0919721493008854DA /* ALDColorBlindEffect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ALDColorBlindEffect-Info.plist"; path = "ALDColorBlindEffect/ALDColorBlindEffect-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A1B23A0A19721493008854DA /* ALDColorBlindEffect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ALDColorBlindEffect-Prefix.pch"; path = "ALDColorBlindEffect/ALDColorBlindEffect-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		A1B23A0F197214A1008854DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ALDColorBlindEffect/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		A1B23A11197214AB008854DA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ALDColorBlindEffect/main.m; sourceTree = SOURCE_ROOT; };
+		A1B23A14197214B8008854DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ALDColorBlindEffect/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		A1B23A15197214B8008854DA /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ALDColorBlindEffect/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
+		A1B23A19197214F3008854DA /* ALDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDRootViewController.h; path = ALDColorBlindEffect/ALDRootViewController.h; sourceTree = SOURCE_ROOT; };
+		A1B23A1A197214F3008854DA /* ALDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDRootViewController.m; path = ALDColorBlindEffect/ALDRootViewController.m; sourceTree = SOURCE_ROOT; };
+		A1B4A7A819722A9200401503 /* ALDColorBlindEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALDColorBlindEffect.h; path = ../ALDColorBlindEffect.h; sourceTree = "<group>"; };
+		A1B4A7A919722A9200401503 /* ALDColorBlindEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALDColorBlindEffect.m; path = ../ALDColorBlindEffect.m; sourceTree = "<group>"; };
+		A1DD185B1970A42E009DF3E5 /* ALDColorBlindEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ALDColorBlindEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DD185E1970A42E009DF3E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1DD18601970A42E009DF3E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1DD18621970A42E009DF3E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1DD18771970A42E009DF3E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A1DD18951970A840009DF3E5 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1DD18581970A42D009DF3E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1DD18961970A840009DF3E5 /* CoreImage.framework in Frameworks */,
+				A1DD18611970A42E009DF3E5 /* CoreGraphics.framework in Frameworks */,
+				A1DD18631970A42E009DF3E5 /* UIKit.framework in Frameworks */,
+				A1DD185F1970A42E009DF3E5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1B23A0419721475008854DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A051972147C008854DA /* AppDelegate */,
+				A1B23A18197214E5008854DA /* RootViewController */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A1B23A051972147C008854DA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A0619721484008854DA /* ALDAppDelegate.h */,
+				A1B23A0719721484008854DA /* ALDAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A1B23A13197214B0008854DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A14197214B8008854DA /* Images.xcassets */,
+				A1B23A15197214B8008854DA /* Storyboard.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A1B23A18197214E5008854DA /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A19197214F3008854DA /* ALDRootViewController.h */,
+				A1B23A1A197214F3008854DA /* ALDRootViewController.m */,
+			);
+			name = RootViewController;
+			sourceTree = "<group>";
+		};
+		A1DD18521970A42D009DF3E5 = {
+			isa = PBXGroup;
+			children = (
+				A1B4A7A819722A9200401503 /* ALDColorBlindEffect.h */,
+				A1B4A7A919722A9200401503 /* ALDColorBlindEffect.m */,
+				A1DD18641970A42E009DF3E5 /* ALDColorBlindEffect */,
+				A1DD185D1970A42E009DF3E5 /* Frameworks */,
+				A1DD185C1970A42E009DF3E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1DD185C1970A42E009DF3E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD185B1970A42E009DF3E5 /* ALDColorBlindEffect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1DD185D1970A42E009DF3E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1DD18951970A840009DF3E5 /* CoreImage.framework */,
+				A1DD185E1970A42E009DF3E5 /* Foundation.framework */,
+				A1DD18601970A42E009DF3E5 /* CoreGraphics.framework */,
+				A1DD18621970A42E009DF3E5 /* UIKit.framework */,
+				A1DD18771970A42E009DF3E5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1DD18641970A42E009DF3E5 /* ALDColorBlindEffect */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A13197214B0008854DA /* Resources */,
+				A1B23A0419721475008854DA /* Classes */,
+				A1DD18651970A42E009DF3E5 /* Supporting Files */,
+			);
+			name = ALDColorBlindEffect;
+			path = ALDSightFilters;
+			sourceTree = "<group>";
+		};
+		A1DD18651970A42E009DF3E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1B23A11197214AB008854DA /* main.m */,
+				A1B23A0919721493008854DA /* ALDColorBlindEffect-Info.plist */,
+				A1B23A0A19721493008854DA /* ALDColorBlindEffect-Prefix.pch */,
+				A1B23A0E197214A1008854DA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1DD185A1970A42D009DF3E5 /* ALDColorBlindEffect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1DD18871970A42E009DF3E5 /* Build configuration list for PBXNativeTarget "ALDColorBlindEffect" */;
+			buildPhases = (
+				A1DD18571970A42D009DF3E5 /* Sources */,
+				A1DD18581970A42D009DF3E5 /* Frameworks */,
+				A1DD18591970A42D009DF3E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ALDColorBlindEffect;
+			productName = ALDSightFilters;
+			productReference = A1DD185B1970A42E009DF3E5 /* ALDColorBlindEffect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1DD18531970A42D009DF3E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ALD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Andy Drizen";
+			};
+			buildConfigurationList = A1DD18561970A42D009DF3E5 /* Build configuration list for PBXProject "ALDColorBlindEffect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A1DD18521970A42D009DF3E5;
+			productRefGroup = A1DD185C1970A42E009DF3E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1DD185A1970A42D009DF3E5 /* ALDColorBlindEffect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1DD18591970A42D009DF3E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B23A10197214A1008854DA /* InfoPlist.strings in Resources */,
+				A1B23A16197214B8008854DA /* Images.xcassets in Resources */,
+				A1B23A17197214B8008854DA /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1DD18571970A42D009DF3E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B23A1B197214F3008854DA /* ALDRootViewController.m in Sources */,
+				A1B23A12197214AB008854DA /* main.m in Sources */,
+				A1B4A7AA19722A9200401503 /* ALDColorBlindEffect.m in Sources */,
+				A1B23A0819721484008854DA /* ALDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1B23A0E197214A1008854DA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1B23A0F197214A1008854DA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1DD18851970A42E009DF3E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A1DD18861970A42E009DF3E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1DD18881970A42E009DF3E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDColorBlindEffect/ALDColorBlindEffect-Prefix.pch";
+				INFOPLIST_FILE = "ALDColorBlindEffect/ALDColorBlindEffect-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = ALDColorBlindEffect;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1DD18891970A42E009DF3E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ALDColorBlindEffect/ALDColorBlindEffect-Prefix.pch";
+				INFOPLIST_FILE = "ALDColorBlindEffect/ALDColorBlindEffect-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = ALDColorBlindEffect;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1DD18561970A42D009DF3E5 /* Build configuration list for PBXProject "ALDColorBlindEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DD18851970A42E009DF3E5 /* Debug */,
+				A1DD18861970A42E009DF3E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1DD18871970A42E009DF3E5 /* Build configuration list for PBXNativeTarget "ALDColorBlindEffect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DD18881970A42E009DF3E5 /* Debug */,
+				A1DD18891970A42E009DF3E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1DD18531970A42D009DF3E5 /* Project object */;
+}
