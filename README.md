@@ -1,6 +1,6 @@
 Using this very simple class, you can quickly get an idea of what your color-blind users will experience when they use your App. This is achieved by converting the colors and acuity of your App in real-time.
 
-## Demo App
+## Demonstration Video
 
 You can download the demo App contained within this repository or watch the following video.
 
