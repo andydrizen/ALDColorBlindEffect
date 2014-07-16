@@ -55,12 +55,6 @@ As well as altering the colors of your App, you may also like to simulate the ex
 
 ## Advanced Features
 
-### Animations
-
-By default, UIView animations will not animate whilst you are simulating color-blindness. This is because doing so can crash your App, e.g. if you have a `UIWebView` in your view hierarchy (radar: 17653298). 
-
-Should you wish to override this behaviour, you can enable animations by setting the `shouldRenderPresentationLayer` to `YES`.
-
 ### Quality
 
 Should you find that performance is suffering whilst you are simulating color-blindness, you can reduce the quality of the effect by setting the `quality` property to any of the following:
@@ -71,7 +65,7 @@ ALDColorBlindEffectQualityMedium,
 ALDColorBlindEffectQualityHigh
 ``` 
 
-The default is `ALDColorBlindEffectQualityHigh`.
+The default is `ALDColorBlindEffectQualityMedium`.
 
 ## Case Study: Tube Tracker
 
