@@ -1,0 +1,10 @@
+PODS:
+  - ALDColorBlindEffect (1.0.0)
+
+DEPENDENCIES:
+  - ALDColorBlindEffect
+
+SPEC CHECKSUMS:
+  ALDColorBlindEffect: ad6194a4b38e02a7e8cb4ef63d518b17d927ae26
+
+COCOAPODS: 0.33.1

@@ -39,10 +39,10 @@
 {
     self = [super init];
     if (self) {
-        _quality = ALDColorBlindEffectQualityHigh;
+        _quality = ALDColorBlindEffectQualityMedium;
         _cachedBlurAmount = 1; // No blur.
         [self updateQualityValuesForQuality:_quality];
-
+        
     }
     return self;
 }
@@ -92,7 +92,7 @@
             self.qualityInterpolation = kCGInterpolationLow;
             break;
         case ALDColorBlindEffectQualityMedium:
-            self.qualityScale = 0.7;
+            self.qualityScale = 0.5;
             self.qualityInterpolation = kCGInterpolationLow;
             break;
         case ALDColorBlindEffectQualityHigh:
@@ -168,13 +168,13 @@
                                             colorSpace,
                                             kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
     CGColorSpaceRelease(colorSpace);
-
+    
     CGContextSetInterpolationQuality(self.inContext, self.qualityInterpolation);
     CGContextSetInterpolationQuality(self.outContext, self.qualityInterpolation);
-
+    
     CGContextConcatCTM(self.inContext, CGAffineTransformMake(1, 0, 0, -1, 0, scaledSize.height));
     CGContextScaleCTM(self.inContext, scale, scale);
-
+    
     self.srcBuffer = (vImage_Buffer){
 		.data = CGBitmapContextGetData(self.inContext),
 		.width = CGBitmapContextGetWidth(self.inContext),
@@ -192,7 +192,13 @@
 
 - (void)handleDisplayLink:(CADisplayLink *)displayLink
 {
-    CGPoint originInWindow = [self.view.superview convertPoint:self.view.frame.origin toView:nil];
+    CGPoint originInWindow;
+    if (self.view.superview) {
+        originInWindow = [self.view.superview convertPoint:self.view.frame.origin toView:nil];
+    }
+    else {
+        originInWindow = self.view.frame.origin;
+    }
     CGRect rect = CGRectMake(originInWindow.x,
                              originInWindow.y,
                              CGRectGetWidth(self.view.frame),
@@ -203,20 +209,17 @@
         self.overlayWindow.windowLevel = UIWindowLevelNormal;
         self.overlayWindow.backgroundColor = [UIColor clearColor];
         self.overlayWindow.userInteractionEnabled = NO;
+        self.overlayWindow.accessibilityElementsHidden = YES;
     }
     self.overlayWindow.hidden = NO;
     
     CGContextRef inContext = CGContextRetain(self.inContext);
 	CGContextRef outContext = CGContextRetain(self.outContext);
-
-    if (self.shouldRenderPresentationLayer) {
-        // If you try to render a *presentationLayer* that contains a UIWebview,
-        // this will currently crash.
-        [self.view.layer.presentationLayer renderInContext:inContext];
-    }
-    else {
-        [self.view.layer renderInContext:inContext];
-    }
+    
+    CGContextClearRect(inContext, rect);
+    UIGraphicsPushContext(self.inContext);
+    [self.view drawViewHierarchyInRect:rect afterScreenUpdates:NO];
+    UIGraphicsPopContext();
     
     vImage_Buffer srcBuffer = self.srcBuffer;
 	vImage_Buffer destBuffer = self.destBuffer;
@@ -276,7 +279,7 @@
     CGImageRef outImage = CGBitmapContextCreateImage(outContext);
 	self.overlayWindow.layer.contents = (__bridge id)(outImage);
 	CGImageRelease(outImage);
-
+    
     CGContextRelease(inContext);
 	CGContextRelease(outContext);
 }
@@ -303,8 +306,8 @@ void convertToDeuteranopia(const vImage_Buffer *srcBuffer, const vImage_Buffer *
 {
     const int16_t matrix[16] =
     { 110,    86,   -6,    0,
-      183,   146,    7,    0,
-      -38,    23,  254,    0,
+        183,   146,    7,    0,
+        -38,    23,  254,    0,
         0,     0,    0,   255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
@@ -313,8 +316,8 @@ void convertToTritanopia(const vImage_Buffer *srcBuffer, const vImage_Buffer *de
 {
     const int16_t matrix[16] =
     { 248,     6,    -16,    0,
-       29,   209,    225,    0,
-      -21,    41,     46,    0,
+        29,   209,    225,    0,
+        -21,    41,     46,    0,
         0,     0,      0,  255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
@@ -323,9 +326,9 @@ void convertToDog(const vImage_Buffer *srcBuffer, const vImage_Buffer *destBuffe
 {
     const int16_t matrix[16] =
     { 81,    64,   -2,    0,
-     218,   174,    2,    0,
-     -44,    17,  255,    0,
-       0,     0,    0,   255 };
+        218,   174,    2,    0,
+        -44,    17,  255,    0,
+        0,     0,    0,   255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
 
@@ -333,8 +336,8 @@ void convertToRodMonochromacy(const vImage_Buffer *srcBuffer, const vImage_Buffe
 {
     const int16_t matrix[16] =
     {  76,    76,     76,     0,
-      150,   150,    150,     0,
-       29,    29,     29,     0,
+        150,   150,    150,     0,
+        29,    29,     29,     0,
         0,     0,      0,   255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
@@ -343,9 +346,9 @@ void convertToMonochromacyLRed(const vImage_Buffer *srcBuffer, const vImage_Buff
 {
     const int16_t matrix[16] =
     { 87,    87,     87,     0,
-     148,   148,    148,     0,
-      20,    20,     20,     0,
-       0,     0,      0,   255 };
+        148,   148,    148,     0,
+        20,    20,     20,     0,
+        0,     0,      0,   255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
 
@@ -353,9 +356,9 @@ void convertToConeMonochromacyMGreen(const vImage_Buffer *srcBuffer, const vImag
 {
     const int16_t matrix[16] =
     { 38,    38,     38,     0,
-     184,   184,    184,     0,
-      32,    32,     32,     0,
-       0,     0,      0,   255 };
+        184,   184,    184,     0,
+        32,    32,     32,     0,
+        0,     0,      0,   255 };
     vImageMatrixMultiply_ARGB8888(srcBuffer, destBuffer, matrix, 255, NULL, NULL, flags);
 }
 

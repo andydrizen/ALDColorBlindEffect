@@ -12,6 +12,7 @@
 @interface ALDRootViewController ()
 @property (weak, nonatomic) IBOutlet UISlider *blurSlider;
 @property (weak, nonatomic) IBOutlet UIView *imageContainerView;
+@property (weak, nonatomic) IBOutlet UIImageView *colourWheel;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
 @end
 
@@ -21,8 +22,10 @@
 {
     [super viewDidLoad];
     [UIView animateWithDuration:1.0 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        self.imageContainerView.transform = CGAffineTransformMakeRotation(M_PI);
+        self.colourWheel.transform = CGAffineTransformMakeRotation(M_PI);
     } completion:nil];
+
+    [ALDColorBlindEffect sharedInstance].view = [UIApplication sharedApplication].delegate.window;
 }
 
 - (IBAction)blurValueChanged:(UISlider *)sender {
@@ -48,6 +51,5 @@
 
     [ALDColorBlindEffect sharedInstance].type = [sender tag];
 }
-
 
 @end

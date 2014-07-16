@@ -92,15 +92,6 @@ typedef NS_ENUM(NSInteger, ALDColorBlindEffectQuality) {
 @property (nonatomic, assign) CGFloat blurAmount;
 
 /**
- By default, the effect will only render the model layer of the view you assign.
- This is because in some cases there are issues presenting the presentation
- layer; for example, if you enable this property, any UIWebView subview will
- cause the application to crash (radar: 17653298).
- */
-@property (nonatomic, assign) BOOL shouldRenderPresentationLayer;
-
-
-/**
  If you need to maintain a high frame rate, set a lower quality. Default is
  ALDColorBlindEffectQualityHigh.
  */
