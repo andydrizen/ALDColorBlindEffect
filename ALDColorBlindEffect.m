@@ -274,7 +274,9 @@
         srcBuffer = tmpBuffer;
     }
     
-    blur(&srcBuffer, &destBuffer, kvImageEdgeExtend, self.cachedBlurAmount);
+    if (self.blurAmount > 0) {
+        blur(&srcBuffer, &destBuffer, kvImageEdgeExtend, self.cachedBlurAmount);
+    }
     
     CGImageRef outImage = CGBitmapContextCreateImage(outContext);
 	self.overlayWindow.layer.contents = (__bridge id)(outImage);

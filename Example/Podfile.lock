@@ -1,10 +1,10 @@
 PODS:
-  - ALDColorBlindEffect (1.0.0)
+  - ALDColorBlindEffect (1.0.1)
 
 DEPENDENCIES:
   - ALDColorBlindEffect
 
 SPEC CHECKSUMS:
-  ALDColorBlindEffect: ad6194a4b38e02a7e8cb4ef63d518b17d927ae26
+  ALDColorBlindEffect: 6b75d8ff11613b73d7c71e9aee6a9b13b6b30741
 
 COCOAPODS: 0.33.1
