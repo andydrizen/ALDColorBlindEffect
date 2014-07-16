@@ -1,5 +1,11 @@
 Using this very simple class, you can quickly get an idea of what your color-blind users will experience when they use your App. This is achieved by converting the colors and acuity of your App in real-time.
 
+## Demonstration
+
+You can download the demo App contained within this repository or watch the following video.
+
+[![ScreenShot](https://raw.github.com/andydrizen/ALDColorBlindEffect/master/VideoDemoScreenshot.png)](http://youtu.be/wvHwPBX0wVk)
+
 ## Integration
 
 `ALDColorBlindEffect` simulates how a given `UIView` will be experienced by users with the most common types color-blindness and varying degrees of visual acuity. To get started, you simply need to set the `view` property of the `[ALDColorBlindEffect sharedInstance]`.
@@ -67,12 +73,6 @@ ALDColorBlindEffectQualityHigh
 
 The default is `ALDColorBlindEffectQualityHigh`.
 
-## Demo App
-
-You can download the demo App contained within this repository or watch the following video.
-
-[![ScreenShot](https://raw.github.com/andydrizen/ALDColorBlindEffect/master/VideoDemoScreenshot.png)](http://youtu.be/wvHwPBX0wVk)
-
 ## Case Study: Tube Tracker
 
 This video demonstrates how you could integrate this class into your project using the Settings.bundle.
@@ -86,5 +86,5 @@ Notice how a tester will be *forced* to use other means (e.g. VoiceOver) to navi
 You can also add this project to yours by using CocoaPods. To do this, add the following line to your Podfile:
 
 ```
-pod 'ALDColorBlind`, '~>1.0.0'
+pod 'ALDColorBlindEffect`, '~>1.0.0'
 ```
