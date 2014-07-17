@@ -145,6 +145,10 @@
 {
     [self cleanUp];
     
+    if (!self.view) {
+        return;
+    }
+    
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
     CGRect r = self.view.frame;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ALDColorBlindEffect"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "See how people with color-blindness experience your App."
 
   s.description  = <<-DESC
