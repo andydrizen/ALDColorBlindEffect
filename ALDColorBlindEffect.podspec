@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ALDColorBlindEffect"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "See how people with color-blindness experience your App."
 
   s.description  = <<-DESC
@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/andydrizen/ALDColorBlindEffect"
   s.license      = { :type => 'BSD', :file => 'LICENCE' }
   s.author       = { "Andy Drizen" => "andydrizen@gmail.com" }
-  s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/andydrizen/ALDColorBlindEffect.git", :tag => "1.0.2" }
+  s.platform     = :ios, "5.0"
+  s.source       = { :git => "https://github.com/andydrizen/ALDColorBlindEffect.git", :tag => "#{s.version}" }
   s.source_files  = 'ALDColorBlindEffect.{h,m}'
   s.requires_arc = true
 end

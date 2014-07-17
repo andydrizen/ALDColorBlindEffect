@@ -217,9 +217,15 @@
 	CGContextRef outContext = CGContextRetain(self.outContext);
     
     CGContextClearRect(inContext, rect);
-    UIGraphicsPushContext(self.inContext);
-    [self.view drawViewHierarchyInRect:rect afterScreenUpdates:NO];
-    UIGraphicsPopContext();
+    
+    if ([self.view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)]) {
+        UIGraphicsPushContext(self.inContext);
+        [self.view drawViewHierarchyInRect:rect afterScreenUpdates:NO];
+        UIGraphicsPopContext();
+    }
+    else {
+        [self.view.layer renderInContext:self.inContext];
+    }
     
     vImage_Buffer srcBuffer = self.srcBuffer;
 	vImage_Buffer destBuffer = self.destBuffer;
@@ -268,17 +274,22 @@
             break;
     }
     
+    BOOL useOutContext = NO;
     if (self.type != ALDColorBlindEffectTypeNone) {
         vImage_Buffer tmpBuffer = destBuffer;
         destBuffer = srcBuffer;
         srcBuffer = tmpBuffer;
+        useOutContext = YES;
     }
     
     if (self.blurAmount > 0) {
+        useOutContext = YES;
         blur(&srcBuffer, &destBuffer, kvImageEdgeExtend, self.cachedBlurAmount);
     }
     
-    CGImageRef outImage = CGBitmapContextCreateImage(outContext);
+    CGContextRef finalContext = useOutContext ? outContext : inContext;
+    
+    CGImageRef outImage = CGBitmapContextCreateImage(finalContext);
 	self.overlayWindow.layer.contents = (__bridge id)(outImage);
 	CGImageRelease(outImage);
     

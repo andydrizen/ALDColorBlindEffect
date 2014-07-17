@@ -2,9 +2,13 @@ PODS:
   - ALDColorBlindEffect (1.0.2)
 
 DEPENDENCIES:
-  - ALDColorBlindEffect
+  - ALDColorBlindEffect (from `..`)
+
+EXTERNAL SOURCES:
+  ALDColorBlindEffect:
+    :path: ..
 
 SPEC CHECKSUMS:
-  ALDColorBlindEffect: 8c5f5bbf6765f26298546e7fbd4fd66f72b5a8bc
+  ALDColorBlindEffect: a9a2576616d4e35e1a1d1e5ea1993ece577a4022
 
 COCOAPODS: 0.33.1

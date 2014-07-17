@@ -1,1 +1,1 @@
-pod 'ALDColorBlindEffect'
+pod 'ALDColorBlindEffect', :path=>".."
